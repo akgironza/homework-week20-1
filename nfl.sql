@@ -1,17 +1,21 @@
 -- 1. List the names of all NFL teams'
-
+SELECT name FROM teams;
 
 -- 2. List the stadium name and head coach of all NFC teams
-
+SELECT stadium, head_coach FROM teams
+    WHERE conference = 'NFC';
 
 -- 3. List the head coaches of the AFC South
-
+SELECT stadium, head_coach FROM teams
+  WHERE conference = 'AFC';
 
 -- 4. The total number of players in the NFL
-
+SELECT COUNT(id) FROM players;
 
 -- 5. The team names and head coaches of the NFC North and AFC East
-
+SELECT name, head_coach FROM teams
+  WHERE conference = 'NFC' AND division = 'North' 
+  OR conference = 'AFC' AND division = 'East';
 
 -- 6. The 50 players with the highest salaries
 
