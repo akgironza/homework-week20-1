@@ -29,10 +29,12 @@ SELECT name, position FROM players
   WHERE salary > 10000000;
 
 -- 9. The player with the highest salary in the NFL
-
+SELECT name, salary FROM players
+  ORDER BY salary DESC LIMIT 1;
 
 -- 10. The name and position of the first 100 players with the lowest salaries
-
+SELECT name, position FROM players
+  ORDER BY salary ASC LIMIT 100;
 
 -- 11. The average salary for a DE in the nfl
 
